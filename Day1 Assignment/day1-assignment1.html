@@ -1,0 +1,85 @@
+ <head>
+  <title> Console functions </title>
+ </head>
+ <body>
+  <p>The console object provides us with several different methods, like :</p>
+log()<br>
+error()<br>
+warn()<br>
+clear()<br>
+time() and timeEnd()<br>
+table()<br>
+count()<br>
+group() and groupEnd()<br>
+custom console logs<br>
+<font size="4" color="blue">console.log():</font>
+<p>Mainly used to log(print) the output to the console. We can put any type inside the log(), be it a string, array, object, boolean etc.</p>
+Example:<br>
+// console.log() method <br>
+console.log('abc'); <br> 
+console.log(1); <br>
+console.log(true); <br>
+console.log(null); <br>
+console.log(undefined);  <br>
+console.log([1, 2, 3, 4]); <br>
+console.log({a:1,b:2,c:3});<br>
+<br> 
+<font size="4" color="blue">console.error():</font>
+<p>Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.</p>
+Example:<br>
+// console.error() method  <br>
+console.error('This is a simple error'); <br>
+<br>
+<font size="4" color="blue">console.warn():</font>
+<p>Used to log warning message to the console. By default the warning message will be highlighted with yellow color.</p>
+Example:<br>
+// console.warn() method  <br>
+console.warn('This is a warning.'); <br>
+<br>
+<font size="4" color="blue">console.clear():</font>
+<p>Used to clear the console. The console will be cleared, in case of Chrome a simple overlayed text will be printed like : ‘Console was cleared’ while in firefox no message is returned.</p>
+Example:<br>
+// console.clear() method <br> 
+console.clear();<br>
+<br>  
+<font size="4" color="blue">console.time() and console.timeEnd():</font>
+<p>Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object. They take a label which must be same, and the code inside can be anything( function, object, simple console).</p>
+Example:<br>
+// console.time() and console.timeEnd() method <br> 
+console.time('abc'); <br>
+ let fun =  function(){<br> 
+     console.log('fun is running');<br> 
+ } <br>
+ let fun2 = function(){ <br>
+     console.log('fun2 is running..'); <br>
+ } <br>
+ fun(); // calling fun(); <br>
+ fun2(); // calling fun2(); <br>
+console.timeEnd('abc');<br>
+<br> 
+<font size="4" color="blue">console.table():</font>
+<p>This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.</p>
+Example:<br>
+// console.table() method 
+console.table({'a':1, 'b':2}); <br>
+<br>
+<font size="4" color="blue">console.count():</font>
+<p>This method is used to count the number that the function hit by this counting method.</p>
+Ex:<br>
+// console.count() method 
+for(let i=0;i<5;i++){ <br>
+    console.count(i);<br> 
+}<br>
+<br>
+<font size="4" color="blue">console.group() and console.groupEnd():</font>
+<p>group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented. Just like the time() and the timeEnd() they also accepts label, again of same value.</p>
+Ex:<br>
+// console.group() and console.groupEnd() method 
+console.group('simple'); <br>
+  console.warn('warning!'); <br>
+  console.error('error here');<br>
+  console.log('vivi vini vici'); <br>
+console.groupEnd('simple'); <br>
+console.log('new section'); <br>
+ </body>
+</html>
